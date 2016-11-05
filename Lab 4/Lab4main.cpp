@@ -12,5 +12,9 @@ using namespace std;
 
 int main() {
 	BSTB *test = new BSTB();
+	test->insert( "Cool");
+	test->insert("Bus");
+	test->insert("Duck");
+	test->printTreeio();
 
 }

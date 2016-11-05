@@ -5,6 +5,7 @@
 
 using namespace std;
 NodeTB::NodeTB(string x){
+	height = 1;
 	data = x;
 	left = NULL;
 	right = NULL;

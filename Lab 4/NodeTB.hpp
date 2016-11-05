@@ -4,6 +4,7 @@
 #define LLNode_HPP_
  class NodeTB{
 	 friend class BSTB;
+	 int height;
 	 string data;
 	 NodeTB *left;
 	 NodeTB *right;
