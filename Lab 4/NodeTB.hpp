@@ -1,13 +1,14 @@
 #include <iostream>
  using namespace std;
-#ifndef LLNode_HPP_
-#define LLNode_HPP_
+#ifndef NodeTB_HPP_
+#define NodeTB_HPP_
  class NodeTB{
 	 friend class BSTB;
 	 int height;
 	 string data;
 	 NodeTB *left;
 	 NodeTB *right;
+	 NodeTB *parent;
 
 public:
 	 NodeTB(string x);

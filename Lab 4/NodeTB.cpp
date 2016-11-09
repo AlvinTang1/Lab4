@@ -9,10 +9,11 @@ NodeTB::NodeTB(string x){
 	data = x;
 	left = NULL;
 	right = NULL;
+	parent = NULL;
 }
 NodeTB:: ~NodeTB(){
 	if (left != NULL || right != NULL) {
-		cout << "deleting this DNode may cause a memory leak" << endl;
+		cout << "deleting this NodeTB may cause a memory leak" << endl;
 	}
 
 }

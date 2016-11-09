@@ -3,6 +3,8 @@
 #ifndef GAME_HPP_
 #define GAME_HPP_
 #include <string>
+#include "BSTB.hpp"
+#include "NodeTB.hpp"
 using namespace std;
 class Game {
 	BSTB *dict; // the AVL tree
