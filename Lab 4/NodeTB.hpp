@@ -14,6 +14,7 @@ public:
 	 NodeTB(string x);
 	 ~NodeTB();
 	 string getData();
+	 int getHeight();
 
  };
 #endif /* NodeTB_HPP_ */

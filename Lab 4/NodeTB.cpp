@@ -20,3 +20,6 @@ NodeTB:: ~NodeTB(){
 string NodeTB::getData(){
 	return data;
 }
+int NodeTB::getHeight(){
+return height;
+}

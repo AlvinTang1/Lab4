@@ -15,9 +15,16 @@ int main() {
 	BSTB *dict = new BSTB();
 	BSTB *test = new BSTB();
 	dict->insert("Cool");
+	dict->insert("Bull");
 	dict->insert("Duck");
 	dict->insert("New");
-	test->insert("Cool");
+	dict->insert("Zap");
+	dict->printTreeio();
+	dict->adjustBalances();
+	dict->insert("Zed");
+	return 0;
+}
+	/*test->insert("Cool");
 	cout << "testing printTreeio()" << endl;
 	test->printTreeio();
 	test->insert("Bus");
@@ -55,7 +62,7 @@ int main() {
 	test->~BSTB();
 	cout<<"testing ~BSTB()"<<endl;
 	test->printTreeio();
-
-
+cout<<"testing getHeight"<<endl;
 	return 1;
 }
+*/

@@ -38,6 +38,7 @@ bool BSTB::insert(string word) {
 		root = n;
 		//root->height = nHeight;
 		count++;
+		cout <<n->getHeight()<<endl;
 		return true;
 	} else {
 		return insert(word, root, nHeight+1);
@@ -49,7 +50,9 @@ bool BSTB::insert(string word, NodeTB *n,int nHeight) {
 		if (n->left == NULL) {
 			n->left = new NodeTB(word);
 			n->left->height = nHeight;
+			n->left->parent = n;
 			count++;
+			cout <<n->left->getHeight()<<endl;
 		} else {
 			return insert(word, n->left,nHeight+1);
 		}
@@ -58,7 +61,9 @@ bool BSTB::insert(string word, NodeTB *n,int nHeight) {
 		if (n->right == NULL) {
 			n->right = new NodeTB(word);
 			n->right->height = nHeight;
+			n->right->parent = n;
 			count++;
+			cout <<n->right->getHeight()<<endl;
 		} else {
 			return insert(word, n->right, nHeight+1);
 		}
@@ -330,6 +335,9 @@ int BSTB::getScore(NodeTB *n, BSTB *dict, int &score) {
 		getScore(n->right, dict, score);
 		if (dict->search(n->data) == true) {
 			++score;
+		}
+		if(dict->search(n->data)==false){
+			score = score - 6;
 		}
 		//cout << "'" << n->getData() << "', ";
 	}
